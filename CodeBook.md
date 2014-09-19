@@ -1,5 +1,5 @@
 Human Activity Recognition Using Smartphones Dataset – Data Cleaning & Reduction Description
-by José Albornoz
+
 
 GENERAL DESCRIPTION OF THE DATASET:
 The original dataset includes the following files:
@@ -15,6 +15,8 @@ Both test and training sets folders include files ‘subject_test’ and ‘subj
 
 STEPS IN THE REDUCTION OF THE DATA SET:
 The following describes the steps found in the script “Project.R”:
+
+
 0)	PRELIMINARY STEPS
 i.	The dataset at "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip" was downloaded; the date and time of the download were recorded in variable “dateDownloaded”
 ii.	The file was unzipped and folder ‘UCI HAR Dataset’ was created.
