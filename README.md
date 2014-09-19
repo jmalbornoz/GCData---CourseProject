@@ -11,6 +11,6 @@ Tidying of the data was performed by
 * c) subsetting the merged data set to keep only those features that have both mean and standard deviation
 * d) replacing the numerical labels identifying the activities by easier-to-read alphanumerical labels in the merged data set 
 * e) naming all the variables in the merged data set with descriptive names
-* f) Summarising the data set by computing the mean for each selected feature grouped by volunteer ID and activity
+* f) summarising the data set by computing the mean for each selected feature grouped by volunteer ID and activity
 
 The above steps are performed by the script 'run\_analysis.R'; this script downloads the necessary data set and saves it in the working directory as file 'dataset.zip'. This file is then unzipped and the original data set is processed; once the script is executed the resulting tidy data set is saved as file 'tidy\_data.txt'
