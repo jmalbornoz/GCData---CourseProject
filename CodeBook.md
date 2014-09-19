@@ -123,3 +123,4 @@ according to columns ‘Activity’ and ‘Subject’; as a result a new data fr
 remaining 58 columns containing the selected features, by activity and by subject: the resulting summarised data frame with 
 the requested averages was stored as ‘theData_avg’, as requested in STEP 5.
 
+6) FINAL STEP; The resulting tidy data set is saved as file 'tidy_data.txt'
