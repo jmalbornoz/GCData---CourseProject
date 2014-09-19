@@ -18,8 +18,8 @@ The following describes the steps found in the script “run_analysis.R”:
 
 
 0)	PRELIMINARY STEPS
-i.	The dataset at "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip" was downloaded; the date and time of the download were recorded in variable “dateDownloaded”
-ii.	The file was unzipped and folder ‘UCI HAR Dataset’ was created.
+* i.	The dataset at "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip" was downloaded; the date and time of the download were recorded in variable “dateDownloaded”
+* ii.	The file was unzipped and folder ‘UCI HAR Dataset’ was created.
 
 1)	STEP 1: MERGING THE TRAINING AND TEST SETS TO CREATE ONE DATA SET
 * i.	File ‘UCI HAR Dataset/test/X_test.txt’ was read into data frame “test” with 2947 rows (one for each observation) and 561 columns (one for each feature)
