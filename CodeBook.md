@@ -14,7 +14,7 @@ The original dataset includes the following files:
 Both test and training sets folders include files ‘subject_test’ and ‘subject_train’; these files contain integer numbers that identify the volunteers that took place in the experiment for the testing and training phases respectively. 
 
 STEPS IN THE REDUCTION OF THE DATA SET:
-The following describes the steps found in the script “Project.R”:
+The following describes the steps found in the script “run_analysis.R”:
 
 
 0)	PRELIMINARY STEPS
