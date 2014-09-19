@@ -5,7 +5,7 @@ GENERAL DESCRIPTION OF THE DATASET:
 The original dataset includes the following files:
 - 'README.txt'
 - 'features_info.txt': Provides information about the 561 variables used in the feature vector.
-- 'features.txt': List of all 561 features. Features are normalized and bounded within [-1,1] (NO UNITS)
+- 'features.txt': List of all 561 features. Features are normalized and bounded within [-1,1] and therefore the variables in the data set have no units associated with them
 - 'activity_labels.txt': List labels for 6 human activities.
 - 'train/X_train.txt': Training set, 7352 rows x 561 columns.
 - 'train/y_train.txt': Training labels for all 6 activities.
