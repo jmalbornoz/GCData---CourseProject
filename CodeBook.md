@@ -22,15 +22,15 @@ i.	The dataset at "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%
 ii.	The file was unzipped and folder ‘UCI HAR Dataset’ was created.
 
 1)	STEP 1: MERGING THE TRAINING AND TEST SETS TO CREATE ONE DATA SET
-i.	File ‘UCI HAR Dataset/test/X_test.txt’ was read into data frame “test” with 2947 rows (one for each observation) and 561 columns (one for each feature)
-ii.	File ‘UCI HAR Dataset/test/subject_test.txt’ (2497 rows, 1 column) was read into data frame ‘test_subjects’
-iii.	File ‘UCI HAR Dataset/test/y_test.txt’ (2497 rows, 1 column) was read into data frame ‘test_activities’
-iv.	Data frames ‘test_subjects’ and ‘test_activities’ were appended to data frame ‘test’. The resulting data frame ‘test’ has now 563 columns: the first column contains integer numbers identifying each of the 9 volunteers whose data was used for the testing phase of the experiment, the second column identifies each of the 6 activities that the experiment aims to identify; the remaining 561 columns corresponds to the features described in file 'features.txt'
-v.	File ‘UCI HAR Dataset/train/X_train.txt’ was read into data frame “train” with 7352 rows (one for each observation) and 561 columns (one for each feature)
-vi.	File ‘UCI HAR Dataset/train/subject_train.txt’ (7352 rows, 1 column) was read into data frame ‘train_subjects’
-vii.	File ‘UCI HAR Dataset/train/y_train.txt’ (7352 rows, 1 column) was read into data frame ‘train_activities’
-viii.	Data frames ‘train_subjects’ and ‘train_activities’ were appended to data frame ‘train’. The resulting data frame ‘train’ has now 563 columns: the first column contains integer numbers identifying each of the 21 volunteers whose data was used for the training phase of the experiment, the second column identifies each of the 6 activities that the experiment aims to identify; the remaining 561 columns corresponds to the features described in file 'features.txt'
-ix.	Data frames ‘train’ and ‘test’ are merged vertically; the result is stored in data frame ‘theData_0.’ This is the requested data set specified in STEP 1.
+* i.	File ‘UCI HAR Dataset/test/X_test.txt’ was read into data frame “test” with 2947 rows (one for each observation) and 561 columns (one for each feature)
+* ii.	File ‘UCI HAR Dataset/test/subject_test.txt’ (2497 rows, 1 column) was read into data frame ‘test_subjects’
+* iii.	File ‘UCI HAR Dataset/test/y_test.txt’ (2497 rows, 1 column) was read into data frame ‘test_activities’
+* iv.	Data frames ‘test_subjects’ and ‘test_activities’ were appended to data frame ‘test’. The resulting data frame ‘test’ has now 563 columns: the first column contains integer numbers identifying each of the 9 volunteers whose data was used for the testing phase of the experiment, the second column identifies each of the 6 activities that the experiment aims to identify; the remaining 561 columns corresponds to the features described in file 'features.txt'
+* v.	File ‘UCI HAR Dataset/train/X_train.txt’ was read into data frame “train” with 7352 rows (one for each observation) and 561 columns (one for each feature)
+* vi.	File ‘UCI HAR Dataset/train/subject_train.txt’ (7352 rows, 1 column) was read into data frame ‘train_subjects’
+* vii.	File ‘UCI HAR Dataset/train/y_train.txt’ (7352 rows, 1 column) was read into data frame ‘train_activities’
+* viii.	Data frames ‘train_subjects’ and ‘train_activities’ were appended to data frame ‘train’. The resulting data frame ‘train’ has now 563 columns: the first column contains integer numbers identifying each of the 21 volunteers whose data was used for the training phase of the experiment, the second column identifies each of the 6 activities that the experiment aims to identify; the remaining 561 columns corresponds to the features described in file 'features.txt'
+* ix.	Data frames ‘train’ and ‘test’ are merged vertically; the result is stored in data frame ‘theData_0.’ This is the requested data set specified in STEP 1.
 
 2)	STEP 2: EXTRACTS ONLY THE MEASUREMENTS ON THE MEAN AND STANDARD DEVIATION FOR EACH MEASUREMENT
 The features that were selected in this step were limited to those that have BOTH mean and standard deviation values, as specified in the list contained in file 'features.txt'. The following is a list of the chosen features; each one is preceded by its corresponding number in the original list of 561 features:
@@ -103,24 +103,12 @@ to the chosen features listed above.
 
 3) STEP 3: DESCRIPTIVE ACTIVITY NAMES ARE USED TO NAME THE ACTIVITIES IN THE DATA SET
 In order to accomplish this task the list of activity names was read from file ‘activity_levels.txt’ into vector ‘activityNames’. 
-Then each integer activity identifier corresponding to each activity in the second column of data frame ‘theData_1’ was 
-replaced by the corresponding character-based descriptor listed in ‘activityNames’. Lastly, these descriptors were converted 
-to factors in data frame ‘theData_1’. 
+Then each integer activity identifier corresponding to each activity in the second column of data frame ‘theData\_1’ was replaced by the corresponding character-based descriptor listed in ‘activityNames’. Lastly, these descriptors were converted to factors in data frame ‘theData_1’. 
 
 4)	STEP 4: LABELS THE DATA SET WITH DESCRIPTIVE DATA LABELS
-The complete list of all feature names was read from file ‘features.txt’ into a data frame named ‘allFeatureNames’; this 
-data frame was then subset using the indexes previously used to subset the columns of ‘theData_0’; these indexes correspond 
-to the list of chosen features (listed in STEP 2); the result was stored in vector ‘selectedNames’. A vector named ‘theNames’ 
-was then built concatenating character strings  ‘Subject’ and ‘Activity’ with the names of the chosen features stored in 
-‘selectedNames’; the names of the columns in ‘theData_1’ were then replaced by the names contained in ‘’theNames’. In this 
-way the columns names in ‘theData_1’ were replaced by ‘Subject’ and ‘Activity’ plus the original names for the 58 chosen 
-features, as requested in STEP 4.
+The complete list of all feature names was read from file ‘features.txt’ into a data frame named ‘allFeatureNames’; this data frame was then subset using the indexes previously used to subset the columns of ‘theData\_0’; these indexes correspond to the list of chosen features (listed in STEP 2); the result was stored in vector ‘selectedNames’. A vector named ‘theNames’ was then built concatenating character strings  ‘Subject’ and ‘Activity’ with the names of the chosen features stored in ‘selectedNames’; the names of the columns in ‘theData\_1’ were then replaced by the names contained in ‘’theNames’. In this way the columns names in ‘theData\_1’ were replaced by ‘Subject’ and ‘Activity’ plus the original names for the 58 chosen features, as requested in STEP 4.
 
 5)	STEP 5: CREATE A SECOND, INDEPENDENT TIDY DATA SET WITH THE AVERAGE OF EACH VARIABLE FOR EACH ACTIVITY AND EACH SUBJECT
-The package ‘dplyr’ was used to perform this task in a few simple steps. Firstly, data frame ‘theData_1’ was re-arranged 
-according to columns ‘Activity’ and ‘Subject’; as a result a new data frame named ‘theData_11’ was generated grouping 
-‘theData_1’ by columns ‘Activity’ and ‘Subject’. The function ‘summarise_each’ was then used to compute the mean of the 
-remaining 58 columns containing the selected features, by activity and by subject: the resulting summarised data frame with 
-the requested averages was stored as ‘theData_avg’, as requested in STEP 5.
+The package ‘dplyr’ was used to perform this task in a few simple steps. Firstly, data frame ‘theData\_1’ was re-arranged according to columns ‘Activity’ and ‘Subject’; as a result a new data frame named ‘theData\_11’ was generated grouping ‘theData\_1’ by columns ‘Activity’ and ‘Subject’. The function ‘summarise\_each’ was then used to compute the mean of the remaining 58 columns containing the selected features, by activity and by subject: the resulting summarised data frame with the requested averages was stored as ‘theData\_avg’, as requested in STEP 5.
 
 6) FINAL STEP: The resulting tidy data set is saved as file 'tidy_data.txt'
