@@ -1,7 +1,6 @@
-London, September 19th 2014
-
 Human Activity Recognition Using Smartphones Dataset – Data Cleaning & Reduction Description
 by José Albornoz
+
 GENERAL DESCRIPTION OF THE DATASET:
 The original dataset includes the following files:
 - 'README.txt'
@@ -100,7 +99,7 @@ the result was stored in data frame ‘theData_1’. This data frame has 10299 r
 the first two correspond to volunteer IDs and activity labels respectively, the remaining 58 columns correspond 
 to the chosen features listed above. 
 
-STEP 3: DESCRIPTIVE ACTIVITY NAMES ARE USED TO NAME THE ACTIVITIES IN THE DATA SET
+3) STEP 3: DESCRIPTIVE ACTIVITY NAMES ARE USED TO NAME THE ACTIVITIES IN THE DATA SET
 In order to accomplish this task the list of activity names was read from file ‘activity_levels.txt’ into vector ‘activityNames’. 
 Then each integer activity identifier corresponding to each activity in the second column of data frame ‘theData_1’ was 
 replaced by the corresponding character-based descriptor listed in ‘activityNames’. Lastly, these descriptors were converted 
