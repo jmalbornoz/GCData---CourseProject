@@ -33,7 +33,7 @@ ii.	The file was unzipped and folder ‘UCI HAR Dataset’ was created.
 * ix.	Data frames ‘train’ and ‘test’ are merged vertically; the result is stored in data frame ‘theData_0.’ This is the requested data set specified in STEP 1.
 
 2)	STEP 2: EXTRACTS ONLY THE MEASUREMENTS ON THE MEAN AND STANDARD DEVIATION FOR EACH MEASUREMENT
-The features that were selected in this step were limited to those that have BOTH mean and standard deviation values, as specified in the list contained in file 'features.txt'. The following is a list of the chosen features; each one is preceded by its corresponding number in the original list of 561 features:
+The features that were selected in this step were limited to those that have BOTH mean and standard deviation values, as specified in the list contained in file 'features.txt'. The following is a list of the 58 chosen features; each one is preceded by its corresponding number in the original list of 561 features:
 * 1 tBodyAcc-mean()-X
 * 2 tBodyAcc-mean()-Y
 * 3 tBodyAcc-mean()-Z
