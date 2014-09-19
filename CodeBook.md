@@ -92,7 +92,6 @@ The features that were selected in this step were limited to those that have BOT
 * 427 fBodyGyro-std()-X
 * 428 fBodyGyro-std()-Y
 * 429 fBodyGyro-std()-Z
-* 430 fBodyGyro-mad()-X
 * 503 fBodyAccMag-mean()
 * 504 fBodyAccMag-std()
 
